@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nefliy App - Gerçek Zamanlı Dosya Yükleme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" crossorigin src="/assets/index-CVDx2GAR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BQ_JyQj-.css">
+  </head>
+  <body>
+    <!-- Ad Modal Overlay -->
+    <div id="ad-overlay" class="ad-overlay">
+      <div class="ad-content">
+        <div class="ad-badge">SPONSORLU</div>
+        <h2>Bu siteyi desteklemek için reklam gösterilmektedir</h2>
+        <div class="ad-banner">
+          <i class="fa-solid fa-bolt"></i>
+          <p>En Hızlı Dosya Yükleme Servisi!</p>
+        </div>
+        <button id="skip-ad-btn" class="skip-btn" disabled>Reklamı Geç (5)</button>
+      </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Main Container -->
+    <main class="app-container">
+      <header class="app-header">
+        <div class="logo">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <h1>Nefliy<span>Share</span></h1>
+        </div>
+        <p class="subtitle">Işık hızında, gerçek zamanlı dosya paylaşımı.</p>
+      </header>
+
+      <div class="upload-section" id="upload-section">
+        <div class="drop-zone" id="drop-zone">
+          <input type="file" id="file-input" hidden multiple>
+          <div class="drop-zone-content">
+            <div class="drop-icon"><i class="fa-solid fa-file-arrow-up"></i></div>
+            <h3>Dosyalarınızı buraya sürükleyin</h3>
+            <p>veya</p>
+            <button class="browse-btn" id="browse-btn">Cihazdan Seç</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Progress Container -->
+      <div class="progress-section hidden" id="progress-section">
+        <div class="file-details">
+          <div class="file-icon"><i class="fa-solid fa-file"></i></div>
+          <div class="file-info">
+            <h4 id="file-name">example_file.zip</h4>
+            <span id="file-size">0 MB</span>
+          </div>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-stats">
+          <span id="upload-speed">0 MB/s</span>
+          <span id="upload-percentage">0%</span>
+          <span id="time-left">Hesaplanıyor...</span>
+        </div>
+      </div>
+
+      <!-- Success Section -->
+      <div class="success-section hidden" id="success-section">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Yükleme Tamamlandı!</h3>
+        <p>Dosyanız başarıyla Nefliy ağlarına yüklendi.</p>
+        <div class="link-container">
+          <input type="text" id="share-link" readonly value="https://nefliy.app/file/xyz123">
+          <button class="copy-btn" id="copy-btn"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <button class="new-upload-btn" id="new-upload-btn">Yeni Dosya Yükle</button>
+      </div>
+
+      <!-- Community Files Section -->
+      <div class="community-section" id="community-section">
+        <h3><i class="fa-solid fa-earth-americas"></i> Topluluk Dosyaları</h3>
+        <p class="community-desc">Diğer kullanıcıların yüklediği son dosyalar</p>
+        <div class="files-list" id="files-list">
+          <!-- Files will be injected here via JS -->
+          <div class="loading-files">Dosyalar yükleniyor...</div>
+        </div>
+      </div>
+
+      <!-- Social Links Footer -->
+      <footer class="app-footer">
+        <div class="social-links">
+          <a href="https://discord.gg/ExN4xsrQQj" target="_blank" class="social-card discord">
+            <i class="fa-brands fa-discord"></i>
+            <span>Discord'a Katıl</span>
+          </a>
+          <a href="https://www.youtube.com/@geytop-z4s" target="_blank" class="social-card youtube">
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube Kanalımız</span>
+          </a>
+        </div>
+      </footer>
+    </main>
+
+  </body>
+</html>
